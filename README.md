@@ -27,8 +27,11 @@ public class PublicationValidatorTest {
 
 ## Explaination
 ```@RunWith(PowerMockRunner.class)``` Will enable powermock for this test class
+
 ```@PrepareForTest({LocalDate.class,Validator.class})``` Include both the class to mock and the class using the mock
+
 ```LocalDate date = LocalDate.of(2000, 1, 1);``` Decide which date should be used for the tests
+
 ```PowerMockito.stub(PowerMockito.method(LocalDate.class,"now")).toReturn(date);``` This line will mock specifically the call to LocalDate.now() (other methods remain unaffected)
 
 It is also possible to mock all calls by using ```PowerMockito.mockStatic(LocalDate.class)``` with a when().thenReturn() statement after. 

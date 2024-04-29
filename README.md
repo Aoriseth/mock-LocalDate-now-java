@@ -25,7 +25,7 @@ public class PublicationValidatorTest {
 }
 ```
 
-## Explaination
+## Explanation
 ```@RunWith(PowerMockRunner.class)``` Will enable powermock for this test class
 
 ```@PrepareForTest({LocalDate.class,Validator.class})``` Include both the class to mock and the class using the mock
